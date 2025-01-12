@@ -42,10 +42,12 @@ const App = () => {
     fetchData();
   }, []);
 
+  // Display loading message while fetching data
   if (loading) {
     return <div>Loading...</div>;
   }
 
+  // Display error message if fetching data failed
   if (error) {
     return <div className="text-red-500">Failed to fetch data. Please try again later.</div>;
   }
@@ -78,23 +80,22 @@ const App = () => {
     }
   });
 
+  // Function to handle sorting of data ascending and descending
   const handleSort = (column) => {
     if (sortColumn === column) {
-      // If the column is already sorted, toggle the sort order
       setSortOrder(sortOrder === "asc" ? "desc" : "asc");
     } else {
-      // Otherwise, sort by the new column in ascending order
       setSortColumn(column);
       setSortOrder("asc");
     }
   };
-  
 
   // Converted string to include `,` as increasing readability
   const formatNumber = (num) => num.toLocaleString("en-US");
 
   return (
     <div className="container mx-auto mt-8">
+      {/* Title */}
       <h1 className="text-2xl md:text-4xl font-extrabold text-center">Apple's Financial Data</h1>
 
       <div className="mb-4">
@@ -135,6 +136,7 @@ const App = () => {
                 className="border rounded px-2 py-1 w-full"
               />
             </div>
+
             <div>
               <label className="block font-semibold">Max Revenue</label>
               <input
@@ -157,6 +159,7 @@ const App = () => {
                 className="border rounded px-2 py-1 w-full"
               />
             </div>
+
             <div>
               <label className="block font-semibold">Max Net Income</label>
               <input
@@ -170,6 +173,7 @@ const App = () => {
         </div>
       </div>
 
+      {/* Clear Filters Button */}
       <div className="mt-4 flex justify">
         <button
           onClick={() => {
@@ -186,6 +190,7 @@ const App = () => {
         </button>
       </div>
 
+      {/* Data Table */}
       <table className="table-auto border-collapse border border-gray-300 mx-auto mt-4">
         <thead>
           <tr className="bg-green-400">
@@ -218,6 +223,7 @@ const App = () => {
               key={item.date} 
               className={index % 2 === 0 ? "bg-gray-200" : "bg-white" }
             >
+              {/* Display data of each element */}
               <td className="border border-gray-400 px-4 py-2">{item.date}</td>
               <td className="border border-gray-400 px-4 py-2">{formatNumber(item.revenue)}</td>
               <td className="border border-gray-400 px-4 py-2">{formatNumber(item.netIncome)}</td>
