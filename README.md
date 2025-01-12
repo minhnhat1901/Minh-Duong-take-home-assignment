@@ -18,7 +18,7 @@
 
 **Note:** For Windows users, you may encounter an issue where `npm` is not recognized as a command. Here is some options you can do:
 - If you are using **PowerShell**, you can run the following command to fix the issue:
-```shell
+```bash
 Set-ExecutionPolicy Unrestricted -Scope Process
 ```
 - If you don't want to run the command above, you can change the terminal to **Command Prompt**. When you look on the right side of the terminal, there is a dropdown menu next to `+` where you can select the terminal you want to use. 
