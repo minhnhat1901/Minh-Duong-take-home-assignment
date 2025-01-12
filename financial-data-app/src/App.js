@@ -21,7 +21,7 @@ const App = () => {
 
   // Question 1
   useEffect(() => {
-    const API_KEY = process.env.REACT_APP_API_KEY;
+    const API_KEY = "DpiN7LGVJc9knVBhpC4vyCFJtWGzuF6N";
     const fetchData = async () => {
       try {
         const response = await fetch(
@@ -170,7 +170,7 @@ const App = () => {
         </div>
       </div>
 
-      <div className="mt-4 flex justify-end">
+      <div className="mt-4 flex justify">
         <button
           onClick={() => {
             setStartDate("");
