@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Minh-Duong-take-home-assignment/static/css/main.8533380c.css",
+    "main.js": "/Minh-Duong-take-home-assignment/static/js/main.9e30938c.js",
+    "index.html": "/Minh-Duong-take-home-assignment/index.html",
+    "main.8533380c.css.map": "/Minh-Duong-take-home-assignment/static/css/main.8533380c.css.map",
+    "main.9e30938c.js.map": "/Minh-Duong-take-home-assignment/static/js/main.9e30938c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8533380c.css",
+    "static/js/main.9e30938c.js"
+  ]
+}
